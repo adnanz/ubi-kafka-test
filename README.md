@@ -1,6 +1,6 @@
 # ubi_kafka
 
-This project processes the sampled events from the provided data file and generate the following 
+This project processes the sampled events from the kafka topic `SampleData` and generates the following 
 information per player (profileId).
 
 - First time seen (you can use the serverDate attribute in the header)
@@ -17,7 +17,7 @@ To create jar go to the root of the project and execute the following command
  
 Run the jar the server with the following command
 
-    java -jar 
+    java -jar {fileName.jar}
     
 # Points To Note
 
@@ -33,4 +33,3 @@ Kafka Streams to setup a topology and make the application stateful.
 1. Result will be printed when the application shuts down. It will print all 
 the stats of all players
 2. `serverDate` attribute in the header is the source of truth for dates
- 
